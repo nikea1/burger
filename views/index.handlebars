@@ -1,0 +1,32 @@
+
+<form>
+	<label for="hamburger">hanbaga nyuuryoku</label>
+	<input type="text" name="hamburger">
+	<input type="submit">
+</form>
+
+<h1>Burgers to eat</h1>
+<ul>
+	{{#each burger}}
+		{{#unless this.devoured}}
+		<li>
+			{{this.burger_name}}
+			<form>
+				<input type="hidden" name="devoured" value="true">
+				<button type="submit">TABERU</button>
+			</form>
+		</li>
+		{{/unless}}
+	{{/each}}
+</ul>
+<h1>Burgers eaten</h1>
+<ul>
+	{{#each burger}}
+		{{#if this.devoured}}
+		<li>
+			{{this.burger_name}}
+			
+		</li>
+		{{/unless}}
+	{{/each}}
+</ul>
