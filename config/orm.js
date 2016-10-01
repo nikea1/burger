@@ -8,7 +8,7 @@ var orm ={
 			console.log(rows);
 			callback(rows);
 		})
-	}
+	},
 
 	insertOne: function(table, column, item, callback){
 		connection.query("INSERT INTO "+table+"("+column+") VALUES (?)", [item], function(err, results){
@@ -17,7 +17,7 @@ var orm ={
 			console.log(results);
 			callback(results);
 		})
-	}
+	},
 
 	updateOne: function(table, column, value ,condition, callback){
 		connection.query("UPDATE "+table+" SET "+column+" = "+value+" WHERE "+condition, function(err, results){
