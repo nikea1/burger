@@ -26,6 +26,12 @@ router.put("/burger/update/:id", function(req, res){
 	})
 })
 
+router.post("/burger/post", function(req, res){
+	burger.insertBurger(req.body.hamburger, function(){
+		res.redirect("/")
+	})
+})
+
 
 
 module.exports = router;
