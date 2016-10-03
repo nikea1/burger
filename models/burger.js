@@ -13,9 +13,9 @@ var burger = {
 		})
 	},
 
-	updateBurger: function(column, value, id){
-		var condition = "id = "+id;
-		orm.updateOne('burgers', column, value, condition, function(res){
+	updateBurger: function(value, condition, callback){
+		
+		orm.updateOne('burgers', value, condition, function(res){
 			callback(res);
 		})
 	}

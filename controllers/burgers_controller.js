@@ -18,6 +18,14 @@ router.get("/burger", function(req, res){
 	})
 })
 
+router.put("/burger/update/:id", function(req, res){
+	
+	var condition = "id = "+req.params.id;
+	burger.updateBurger(req.body.devoured, condition, function(){
+		res.redirect("/")
+	})
+})
+
 
 
 module.exports = router;

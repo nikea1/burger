@@ -19,8 +19,8 @@ var orm ={
 		})
 	},
 
-	updateOne: function(table, column, value ,condition, callback){
-		connection.query("UPDATE "+table+" SET "+column+" = "+value+" WHERE "+condition, function(err, results){
+	updateOne: function(table, value, condition, callback){
+		connection.query("UPDATE "+table+" SET devoured = "+value+" WHERE "+condition,  function(err, results){
 			if (err) throw err;
 
 			console.log(results);
