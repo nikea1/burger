@@ -1,3 +1,5 @@
+<img src="http://icons.iconarchive.com/icons/pixelkit/tasty-bites/512/hamburger-icon.png" alt="Picture of a burger">
+<h1>HANBAGA GA TABERU</h1>
 
 <form action="burger/post" method="POST">
 	<label for="hamburger">hanbaga nyuuryoku</label>
@@ -10,6 +12,7 @@
 	{{#each burgers}}
 		{{#unless this.devoured}}
 		<li>
+			<img src="http://icons.iconarchive.com/icons/pixelkit/tasty-bites/512/hamburger-icon.png" alt="Picture of a burger" height="64px" width="64px">
 			{{this.burger_name}}
 			<form action="burger/update/{{this.id}}?_method=PUT" method="POST">
 				<input type="hidden" name="devoured" value="true">
@@ -24,6 +27,7 @@
 	{{#each burgers}}
 		{{#if this.devoured}}
 		<li>
+			<img src="http://icons.iconarchive.com/icons/pixelkit/tasty-bites/512/hamburger-icon.png" alt="Picture of a burger" height="64px" width="64px">
 			{{this.burger_name}}
 			
 		</li>
